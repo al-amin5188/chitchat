@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.description }}</p>
+
+  <h3>Comments</h3>
+  <form method="POST">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit" name="comment">Post Comment</button>
+  </form>
+
+  <h3>Ratings</h3>
+  <form method="POST">
+    {% csrf_token %}
+    {{ rating_form.as_p }}
+    <button type="submit" name="rating">Submit Rating</button>
+  </form>
+{% endblock %}

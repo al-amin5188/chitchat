@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Notifications</h1>
+  <ul>
+    {% for notification in notifications %}
+      <li>
+        <strong>{{ notification.message }}</strong> - {{ notification.created_at }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
