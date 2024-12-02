@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- css-->
+    <link rel="stylesheet" href="{% static "base/style.css" %}">
+    <!-- icon cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+</head>
+<body>
+
+    {% include "base/header.html" %}
+
+    {% block content %}{% endblock content %}
+
+    {% block extra_js %}{% endblock extra_js %}
+
+
+</body>
+</html>

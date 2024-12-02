@@ -1,7 +1,7 @@
 {% extends "base/base.html" %}
 {% load static %}
 
-{% block title %} Notification {% endblock title %}
+{% block title %} Resource {% endblock title %}
 
 {% block content %}
 <!-- ========== Start Main section  ========== -->
@@ -23,10 +23,10 @@
                 <a href="{% url "home" %}" class="menu-item ">
                     <span><i class="uil uil-home"></i></span><h3>Home</h3>
                 </a>
-                <a href="{% url "resource" %}" class="menu-item" id="notifications">
+                <a href="{% url "resource" %}" class="menu-item active" id="notifications">
                     <span><i class="uil uil-compass"></i></span><h3>Explore</h3>
                 </a>
-                <a href="{% url "notification" %}" class="menu-item active">
+                <a href="{% url "notification" %}" class="menu-item">
                     <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span><h3>Notifications</h3>
                     <!--- Notification popup-->
                     <div class="notifications-popup">
@@ -90,7 +90,46 @@
 
         <!---- Right side-->
         <div class="right">
-            
+            <div class="messages">
+                <div class="heading">
+                    <h4>Messages</h4><i class="uil uil-edit"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="uil uil-search"></i>
+                    <input type="search" placeholder="Search messages" id="message-search">
+                </div>
+                <div class="category">
+                    <h6 class="active">General</h6>
+                    <h6>Groups</h6>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">
+                        <img src="{% static "images/profile-picture.jpg" %}" alt="">
+                    </div>
+                    <div class="message-body">
+                        <h5>Al-amin</h5>
+                        <p class="text-muted">Lorem ipsum dolor sit amet...</p>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">
+                        <img src="{% static "images/profile-picture.jpg" %}" alt="">
+                    </div>
+                    <div class="message-body">
+                        <h5>Al-amin</h5>
+                        <p class="text-muted">Lorem ipsum dolor sit amet...</p>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="profile-photo">
+                        <img src="{% static "images/profile-picture.jpg" %}" alt="">
+                    </div>
+                    <div class="message-body">
+                        <h5>Al-amin</h5>
+                        <p class="text-muted">Lorem ipsum dolor sit amet...</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </main>

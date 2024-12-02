@@ -1,0 +1,22 @@
+{% load static %}
+
+<nav>
+    <div class="container">
+        <h2 class="log">
+            ChitChat
+        </h2>
+        <div class="search-bar">
+            <i class="uil uil-serch"></i>
+            <input type="search" placeholder="Search for ...">
+        </div>
+        <div class="create">
+            <a href="{% url "register" %}">
+                <label class="btn btn-primary" for="create-post">Create</label>
+            </a>
+            <div class="profile-photo">
+                <img src="{% static "images/profile-picture.jpg" %}" >
+            </div>
+        </div>
+
+    </div>
+</nav>
